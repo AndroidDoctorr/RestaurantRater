@@ -20,6 +20,7 @@ namespace RestaurantRaterAPI
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    webBuilder.UseUrls("http://localhost:80", "https://localhost:443");
                     webBuilder.UseStartup<Startup>();
                 });
     }
